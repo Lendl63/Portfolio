@@ -1,0 +1,46 @@
+:root {
+    /* Fonts */
+    --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-accent: 'Space Grotesk', 'Inter', sans-serif;
+
+    /* Font sizes */
+    --fs-hero: clamp(2.5rem, 5vw, 4rem);
+    --fs-h2: clamp(1.6rem, 3vw, 2rem);
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    --fs-small: 0.875rem;
+
+    /* Font weights */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* Line height */
+    --lh-title: 1.2;
+    --lh-body: 1.6;
+    /* Backgrounds (alternance) */
+    --bg-dark: #111826;
+    --bg-soft: #1A2233;
+    --bg-hero: #122A59;
+
+    /* Surfaces */
+    --card: #253140;
+
+    /* Texte */
+    --text-main: #F2F2F2;
+    --text-muted: #5C6673;
+
+    /* Accents */
+    --accent-main: #5B6CFF;
+    --accent-alt: #7C5CFF;
+
+    /* States */
+    --success: #34D399;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+
+    /* UI helpers */
+    --border-soft: rgba(92,102,115,0.25);
+}
+
