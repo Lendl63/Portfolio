@@ -20,16 +20,19 @@
     --lh-title: 1.2;
     --lh-body: 1.6;
     /* Backgrounds (alternance) */
-    --bg-dark: #111826;
-    --bg-soft: #1A2233;
-    --bg-hero: #122A59;
+    --bg-dark: rgb(17, 24, 38);
+    --bg-soft: rgb(26, 34, 51);
+    --bg-dark-second: rgba(17, 24, 38, 0.5);
+    --bg-soft-second: rgba(26, 34, 51, 0.5);
+    --bg-hero: rgb(18, 42, 89);
+    --bg-btn : rgba(255, 255, 255, 0.24);
 
     /* Surfaces */
-    --card: #253140;
+    --card: rgb(37, 49, 64);
 
     /* Texte */
-    --text-main: #F2F2F2;
-    --text-muted: #5C6673;
+    --text-main: rgb(242, 242, 242);
+    --text-muted: rgb(92, 102, 115);
 
     /* Accents */
     --accent-main: #5B6CFF;
@@ -41,6 +44,6 @@
     --danger: #EF4444;
 
     /* UI helpers */
-    --border-soft: rgba(92,102,115,0.25);
+    --border-soft: rgba(92, 102, 115, 0.25);
 }
 
