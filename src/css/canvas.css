@@ -1,7 +1,7 @@
 @import url("root.css");
 
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION (CANVAS) ===== */
 .hero {
     position: relative;
     width: 100%;
@@ -42,40 +42,8 @@
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
-    max-width: 600px;
+    max-width: 40rem;
     padding: 20px;
-}
-
-.hero-content h1 {
-    font-size: var(--fs-hero);
-    font-weight: 700;
-    margin-bottom: 1rem;
-    letter-spacing: -0.02em;
-    animation: fadeInUp 0.8s ease-out 0.2s backwards;
-}
-
-.hero-content p {
-    font-size: var(--fs-body);
-    color: var(--text-muted);
-    margin-bottom: 2rem;
-    animation: fadeInUp 0.8s ease-out 0.4s backwards;
-}
-
-.hero-content button {
-    padding: 12px 32px;
-    font-size: 1rem;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.051);
-    color: rgb(255, 255, 255);
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    animation: fadeInUp 0.8s ease-out 0.6s backwards;
-}
-
-.hero-content button:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.6);
 }
 
 /* Animation fade-in */
@@ -94,10 +62,7 @@
     .hero {
         min-height: 500px;
     }
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-    .hero-content p {
-        font-size: 1rem;
+    .hero-btn {
+        flex-direction: column;
     }
 }

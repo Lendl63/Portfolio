@@ -1,4 +1,4 @@
-@import url(root.css);
+@import url("root.css");
 
 * {
     margin: 0;
@@ -11,3 +11,81 @@ body {
     color: var(--text-main);
     overflow-x: hidden;
 }
+
+/* ===== HERO SECTION ===== */
+
+.hero-content h1 {
+    font-size: var(--fs-hero);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.hero-content p {
+    font-size: var(--fs-body);
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+.hero-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+
+    cursor: pointer;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out 0.6s backwards;
+}
+
+.more {
+    background-color: var(--bg-input);
+}
+
+.contact {
+    background: rgba(255, 255, 255, 0.253);
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.342);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-text {
+    font-size: var(--fs-body);
+    font-weight: var(--fw-medium);
+}
+
+.btn-icon {
+    width: 28px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+}
+
+.btn-icon > svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* ===== ABOUT SECTION ===== */
