@@ -7,14 +7,36 @@
 }
 
 body {
-    font-family: var(--font-main);
-    color: var(--text-main);
     overflow-x: hidden;
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== STYLE COMMUN ===== */
+.section-title {
+    margin-top: 5rem;
+    font-family: var(--font-main);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-title);
+    color: var(--text-main);
+}
 
+.section-text {
+    font-family: var(--font-main);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--text-main);
+}
+
+.soft {
+    background: var(--bg-soft);
+    border-top: 5px solid var(--border-soft);
+    border-bottom: 5px solid var(--border-soft);
+}
+
+/* ===== HERO SECTION ===== */
 .hero-content h1 {
+    font-family: var(--font-accent);
+    color: var(--text-main);
     font-size: var(--fs-hero);
     font-weight: var(--fw-bold);
     margin-bottom: 1rem;
@@ -23,6 +45,7 @@ body {
 }
 
 .hero-content p {
+    font-family: var(--font-main);
     font-size: var(--fs-body);
     color: var(--text-muted);
     margin-bottom: 2rem;
@@ -53,7 +76,7 @@ body {
 }
 
 .more {
-    background-color: var(--bg-input);
+    background-color: transparent;
 }
 
 .contact {
@@ -89,3 +112,70 @@ body {
 }
 
 /* ===== ABOUT SECTION ===== */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-contain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    width: 90%;
+    height: auto;
+    padding: 1rem 4rem;
+    margin-bottom: 3rem;
+}
+
+.about-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+
+    font-weight: var(--fw-semibold);
+}
+
+.skill {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 999px;
+    background: var(--bg-soft-second);
+}
+
+.about-img {
+    padding: 2rem;
+    position: relative;
+    border-radius: 1rem 0 1rem 0;
+    background: rgba(242, 242, 242, 0.137);
+}
+
+.avatar > img {
+    object-fit: cover;
+    width: 12rem;
+    height: 15rem;
+}
+
+.dot {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid var(--border-soft);
+    background: rgba(242, 242, 242, 0.5);
+}
+
+.dot-top {
+    width: 12px;
+    height: 12px;
+    top: -6px;
+    right: -5px;
+}
+
+.dot-bottom {
+    width: 22px;
+    height: 22px;
+    bottom: -6px;
+    left: -5px;
+}

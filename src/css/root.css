@@ -23,7 +23,7 @@
     --bg-dark: rgb(17, 24, 38);
     --bg-soft: rgb(26, 34, 51);
     --bg-dark-second: rgba(17, 24, 38, 0.5);
-    --bg-soft-second: rgba(26, 34, 51, 0.5);
+    --bg-soft-second: rgba(68, 77, 97, 0.76);
     --bg-hero: rgb(18, 42, 89);
     --bg-btn : rgba(255, 255, 255, 0.051);
 
@@ -44,6 +44,6 @@
     --danger: #EF4444;
 
     /* UI helpers */
-    --border-soft: rgba(92, 102, 115, 0.25);
+    --border-soft: rgba(92, 102, 115, 0.507);
 }
 
