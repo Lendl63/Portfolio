@@ -26,9 +26,10 @@
     --bg-soft-second: rgba(68, 77, 97, 0.76);
     --bg-hero: rgb(18, 42, 89);
     --bg-btn : rgba(255, 255, 255, 0.051);
+    --bg-icon: rgba(242, 242, 242, 0.596);
 
     /* Surfaces */
-    --card: rgb(37, 49, 64);
+    --card-dark: rgba(37, 49, 64, 0.63);
 
     /* Texte */
     --text-main: rgb(242, 242, 242);

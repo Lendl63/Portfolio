@@ -20,17 +20,37 @@ body {
     color: var(--text-main);
 }
 
+.section-title-second {
+    font-family: var(--font-main);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-title);
+    color: var(--text-main);
+}
+
 .section-text {
     font-family: var(--font-main);
     font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
     line-height: var(--lh-body);
     color: var(--text-main);
+}
+
+.section-text-second {
+    font-family: var(--font-main);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-medium);
+    color: var(--text-muted);
 }
 
 .soft {
     background: var(--bg-soft);
     border-top: 5px solid var(--border-soft);
     border-bottom: 5px solid var(--border-soft);
+}
+
+.dark {
+    background: var(--bg-dark);
 }
 
 /* ===== HERO SECTION ===== */
@@ -163,7 +183,7 @@ body {
     position: absolute;
     border-radius: 50%;
     border: 1px solid var(--border-soft);
-    background: rgba(242, 242, 242, 0.5);
+    background: rgba(242, 242, 242, 0.596);
 }
 
 .dot-top {
@@ -178,4 +198,65 @@ body {
     height: 22px;
     bottom: -6px;
     left: -5px;
+}
+
+/* ===== FORMATION SECTION ===== */
+.formation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formation-contain {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 90%;
+    padding: 4rem 3rem;
+    
+    gap: 2rem;
+}
+
+.formation-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    border: 2px solid var(--border-soft);
+    border-radius: 7px;
+    background: var(--card-dark);
+    padding: 1rem;
+}
+
+.formation-icon {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(242, 242, 242, 0.596);
+    color: var(--text-main);
+    border: none;
+    border-radius: 50%;
+}
+
+.formation-icon > svg {
+    width: 24px;
+    height: 24px;
+    
+    border: none;
+    border-radius: 50%;
+}
+
+.formation-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 1rem;
+    width: 90%;
 }
