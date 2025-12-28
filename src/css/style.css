@@ -300,3 +300,67 @@ section {
     height: 90%;
     gap: 1rem;
 }
+
+/* ===== PROJECTS SECTION ===== */
+.projects-contain,
+.project-card,
+.type-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-contain {
+    width: 80%;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.project-card {
+    flex-direction: column;
+    border: 1px solid var(--border-soft);
+    border-radius: 7px;
+    height: 25rem;
+}
+
+.type-project {
+    height: 50%;
+    width: 100%;
+    background: linear-gradient(-25deg, var(--card-dark) 10%,  var(--card-soft) 90%);
+}
+
+.type-project > p {
+    font-family: var(--font-main);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-title);
+    color: var(--text-muted);
+}
+
+.details-project {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 50%;
+    background: var(--card-dark);
+    padding: 1rem;
+}
+
+.details-project > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-main);
+}
+
+.details-project > ul > li {
+    font-family: var(--font-main);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-regular);
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: var(--bg-icon);
+}
