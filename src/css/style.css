@@ -262,7 +262,8 @@ section {
 
 /*===== SKILLS SECTION =====*/
 .skill-contain {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-content: center;
     padding: 4rem 3rem;
@@ -302,7 +303,6 @@ section {
 }
 
 /* ===== PROJECTS SECTION ===== */
-.projects-contain,
 .project-card,
 .type-project {
     display: flex;
@@ -311,6 +311,8 @@ section {
 }
 
 .projects-contain {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 80%;
     gap: 2rem;
     padding: 3rem;
@@ -361,7 +363,7 @@ section {
     font-size: var(--fs-small);
     font-weight: var(--fw-regular);
     padding: 0.5rem;
-    border-radius: 10px;
+    border-radius: 7px;
     background-color: var(--bg-icon);
 }
 
