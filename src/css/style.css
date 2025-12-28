@@ -11,6 +11,13 @@ body {
 }
 
 /* ===== STYLE COMMUN ===== */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .section-title {
     margin-top: 5rem;
     font-family: var(--font-main);
@@ -51,6 +58,17 @@ body {
 
 .dark {
     background: var(--bg-dark);
+}
+
+.div-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--bg-icon);
+    color: var(--text-main);
+    border: none;
+    border-radius: 50%;
 }
 
 /* ===== HERO SECTION ===== */
@@ -132,13 +150,6 @@ body {
 }
 
 /* ===== ABOUT SECTION ===== */
-.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .about-contain {
     display: flex;
     align-items: center;
@@ -163,7 +174,7 @@ body {
     font-weight: var(--fw-semibold);
 }
 
-.skill {
+.about-skill {
     padding: 6px 12px;
     border: none;
     border-radius: 999px;
@@ -174,7 +185,7 @@ body {
     padding: 2rem;
     position: relative;
     border-radius: 1rem 0 1rem 0;
-    background: rgba(242, 242, 242, 0.137);
+    background: var(--card-soft);
 }
 
 .avatar > img {
@@ -187,7 +198,7 @@ body {
     position: absolute;
     border-radius: 50%;
     border: 1px solid var(--border-soft);
-    background: rgba(242, 242, 242, 0.596);
+    background: var(--bg-icon);
 }
 
 .dot-top {
@@ -205,16 +216,9 @@ body {
 }
 
 /* ===== FORMATION SECTION ===== */
-.formation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .formation-contain {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 2fr);
     width: 65%;
     padding: 4rem 3rem;
     
@@ -236,15 +240,6 @@ body {
     width: 50px;
     height: 50px;
     padding: 5px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: rgba(242, 242, 242, 0.596);
-    color: var(--text-main);
-    border: none;
-    border-radius: 50%;
 }
 
 .formation-icon > svg {
@@ -263,4 +258,45 @@ body {
     gap: 5px;
     margin-left: 1rem;
     width: 90%;
+}
+
+/*===== SKILLS SECTION =====*/
+.skill-contain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 3rem;
+    gap: 2rem;
+}
+
+.icon-skill {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+}
+
+.icon-skill > svg {
+    width: 28px;
+    height: 28px;
+}
+
+.skill-card,
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-card {
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--border-soft);
+    border-radius: 5px;
+    background: var(--card-soft);
+}
+
+.skill {
+    height: 90%;
+    gap: 1rem;
 }
