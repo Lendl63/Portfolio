@@ -393,7 +393,7 @@ section {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 2rem;
+    padding: 0.8rem;
     background: var(--card-soft);
     border-radius: 15px;
 }
@@ -610,4 +610,49 @@ footer > .citation {
     font-family: var(--font-main);
     font-size: var(--fs-body);
     color: var(--text-muted);
-    font-weight: var(--fw-medium);}
+    font-weight: var(--fw-medium);
+}
+
+/* ===== ANIMATION : HOVER ===== */
+
+/*----card----*/
+
+.formation-card,
+.skill-card,
+.project-card,
+.reviews-card {
+    transition: transform 0.3s ease;
+}
+
+.formation-card:hover,
+.skill-card:hover,
+.project-card:hover,
+.reviews-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card {
+    transition: transform 0.4s ease;
+}
+
+.stat-card:hover {
+    transform: scale(1.07);
+}
+
+/*----button----*/
+.form > button {
+    transition: all 0.4s ease;
+}
+
+.form > button:hover {
+    background: var(--accent-main);
+}
+
+/*----link-icon----*/
+.link-icon {
+    transition: all 0.2s ease-in-out;
+}
+
+.link-icon:hover {
+    color: var(--accent-alt);
+}
