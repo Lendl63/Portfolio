@@ -15,6 +15,7 @@
 
     <!-- JS -->
     <script defer src="src/js/canvas.js" defer></script>
+    <script src="src/js/nav.js" defer></script>
 
     <title>Document</title>
 </head>
@@ -24,24 +25,39 @@
         <div class="logo">
             <div class="logo-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" fill="currentColor" d="M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783h-2.078l-4.011 16h2.073l4.016-16z"/>
+                    <path fill-rule="evenodd" fill="currentColor" d="M24 10.935v2.131l-8 3.947v-2.23l5.64-2.783-5.64-2.79v-2.223l8 3.948zm-16 3.848l-5.64-2.783 5.64-2.79v-2.223l-8 3.948v2.131l8 3.947v-2.23zm7.047-10.783h-2.078l-4.011 16h2.073l4.016-16z"/>
                 </svg>
             </div>
             <h2 class="logo-name">Yvan</h2>
         </div>
-        <div>
+        <div class="nav-menu" style="display: none;">&#9776;</div>
+        <div class="nav-div">
             <nav class="nav">
-                <li>Acceuil</li>
-                <li>A propos</li>
-                <li>Formation</li>
-                <li>Compétences</li>
-                <li>Projets</li>
-                <li>Stats</li>
-                <li>Témoignages</li>
-                <li>Contact</li>
+                <a href="#hero">Acceuil</a>
+                <a href="#about">A propos</a>
+                <a href="#formation">Formation</a>
+                <a href="#skill">Compétences</a>
+                <a href="#project">Projets</a>
+                <a href="#stats">Stats</a>
+                <a href="#reviews">Témoignages</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
+    <!--===== MODAL NAV =====-->
+    <div class="modal-nav">
+        <div>
+            <a class="modal-nav-link" href="#hero">Acceuil</a>
+            <a class="modal-nav-link" href="#about">A propos</a>
+            <a class="modal-nav-link" href="#formation">Formation</a>
+            <a class="modal-nav-link" href="#skill">Compétences</a>
+            <a class="modal-nav-link" href="#project">Projets</a>
+            <a class="modal-nav-link" href="#stats">Stats</a>
+            <a class="modal-nav-link" href="#reviews">Témoignages</a>
+            <a class="modal-nav-link" href="#contact">Contact</a>
+        </div>
+    </div>
+
 
     <!--===== HERO SECTION =====-->
     <section class="hero" id="hero">

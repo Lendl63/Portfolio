@@ -6,11 +6,17 @@
     box-sizing: border-box;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 body {
     overflow-x: hidden;
 }
 
-/* ===== STYLE COMMUN ===== */
+/* ===== COMMON STYLE ===== */
 section {
     display: flex;
     flex-direction: column;
@@ -82,7 +88,7 @@ header {
     justify-content: space-between;
     padding: 0.5rem;
     background: rgba(10, 14, 39, 0.1);
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--text-muted);
 }
 
@@ -126,7 +132,9 @@ header {
     gap: 0.8rem;
 }
 
-.nav > li {
+.nav > a,
+.modal-nav > div > a {
+    text-decoration: none;
     font-family: var(--font-main);
     font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
@@ -137,8 +145,61 @@ header {
     transition: color 0.7s ease;
 }
 
-.nav > li:hover {
+.nav > a:hover,
+.modal-nav > div > a:hover {
     color: var(--accent-main);
+}
+
+/* ===== MODAL NAV ===== */
+
+.nav-menu {
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-title);
+    color: var(--text-main);
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.modal-nav {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    animation: fadeInUp 0.3s ease-out 0.2s backwards;
+}
+
+.modal-nav.active {
+    display: flex;
+}
+
+.modal-nav > div {
+    position: relative;
+    width: min(90%, 400px);
+    padding: 2rem 1rem;
+    background: rgb(10, 14, 39);
+    border: var(--border-soft);
+    border-radius: 50px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.modal-nav > div > a {
+    display: block;
+    border-top: 2px solid var(--border-soft);
+    width: 100%;
+    text-align: center;
+}
+
+.modal-nav > div > a:first-child {
+    border: none;
 }
 
 /* ===== HERO SECTION ===== */
