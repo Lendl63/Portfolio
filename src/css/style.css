@@ -405,3 +405,71 @@ section {
     font-weight: var(--fw-bold);
     color: var(--text-muted);
 }
+
+/* ===== REVIEW SECTION ===== */
+.reviews-contain {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 3rem 4rem;
+}
+
+.reviews-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    background: var(--card-dark);
+}
+
+.reviews-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.reviews-card-head > img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: none;
+    color: var(--text-muted);
+}
+
+.reviews-card-head > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.25rem;
+}
+
+.reviews-card-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.25rem;
+}
+
+.reviews-card-footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.25rem;
+    gap: 0.5rem;
+}
+
+.reviews-card-footer > span {
+    width: 15px;
+    height: 15px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background: var(--text-main);
+}
