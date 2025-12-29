@@ -113,11 +113,11 @@ section {
     animation: fadeInUp 0.8s ease-out 0.6s backwards;
 }
 
-.more {
+.more-btn {
     background-color: transparent;
 }
 
-.contact {
+.contact-btn {
     background: rgba(255, 255, 255, 0.253);
 }
 
@@ -472,4 +472,126 @@ section {
     height: 15px;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     background: var(--text-main);
+}
+
+/* ===== FORM SECTION ===== */
+.contact {
+    gap: 2rem;
+}
+
+.contact-contain {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 3rem 4rem;
+    gap: 2rem;
+    width: 90%;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    width: 30%;
+}
+
+.info-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.info,
+.info-icon,
+.link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.info-icon,
+.link-icon {
+    width: 30px;
+    height: 30px;
+    color: var(--text-muted);
+}
+
+.info-icon > svg,
+.link-icon > svg {
+    width: 24px;
+    height: 24px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0;
+}
+
+.contact-contain > div:last-child {
+    width: 30%;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: var(--card-soft);
+    border-radius: 15px;
+}
+
+.form > input,
+.form > textarea {
+    font-family: var(--font-main);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-regular);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: var(--text-main);
+    background: var(--bg-dark);
+    transition: border 0.2s ease-in-out;
+}
+
+.form > input {
+    padding: 0.8rem;
+}
+
+.form > textarea {
+    padding: 0.5rem;
+    height: 9rem;
+}
+
+.form > input:focus,
+.form > textarea:focus {
+    outline: none;
+    background: var(--bg-dark);
+    border: 1px solid var(--accent-main);
+}
+
+.form > button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: var(--text-muted);
+    background: var(--bg-icon);
+}
+
+#form > button > .btn-icon {
+    color: var(--text-main);
 }
