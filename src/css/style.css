@@ -71,6 +71,76 @@ section {
     border-radius: 50%;
 }
 
+/* ===== HEADER ===== */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: rgba(10, 14, 39, 0.1);
+    backdrop-filter: blur(50px);
+    border-bottom: 1px solid var(--text-muted);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--text-main);
+    margin-right: 0.5rem;
+}
+
+.logo-icon > svg {
+    width: 30px;
+    height: 30px;
+}
+
+.logo-name {
+    font-family: var(--font-main);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-title);
+    color: var(--text-main);
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.nav > li {
+    font-family: var(--font-main);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-title);
+    color: var(--text-main);
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: color 0.7s ease;
+}
+
+.nav > li:hover {
+    color: var(--accent-main);
+}
+
 /* ===== HERO SECTION ===== */
 .hero-content h1 {
     font-family: var(--font-accent);
