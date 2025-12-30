@@ -1,0 +1,113 @@
+/*===== RESPONSIVE DESIGN =====*/
+@media (max-width: 1024px) {
+    .about-contain,
+    .projects-contain {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .formation-contain {
+        width: 100%;
+    }
+
+    .projects-contain {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .project-card {
+        height: 30rem;
+    }
+
+    .reviews-contain {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-contain > div:last-child {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-contain {
+        flex-direction: column;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+    
+    .skill-contain {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .projects-contain {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 1rem 1.5rem;
+    }
+
+    .project-card {
+        flex-direction: row;
+        height: 15rem;
+    }
+
+    .project-card div {
+        height: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews-contain {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-contain {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact > p {
+        padding: 1rem;
+    }
+
+    .infos {
+        width: 100%;
+        align-items: center;
+    }
+
+    .contact-contain > div:last-child {
+        width: 100%;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .formation-contain {
+        padding: 0.5rem 1rem;
+    }
+
+    .formation-card {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .skill-contain {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-card {
+        flex-direction: column;
+        height: 25rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
