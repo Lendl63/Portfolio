@@ -52,3 +52,21 @@ modalNavLinks.forEach(link => {
 /*===== Application du responsive (nav modal) sur tablette et modile =====*/
 window.addEventListener('resize', isDesktop);
 isDesktop();
+
+/*===== ANIMATION AU SCROLL =====*/
+const sectionObserver = new IntersectionObserver( function (entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('show'); //appliquer l'animation
+            observer.unobserve(entry.target); //ne repete pas l'animation
+        }
+    });
+},{threshold: 0.4}); // section visible a 40%
+
+const fadeEls = document.querySelectorAll('.fade-in');
+
+fadeEls.forEach(fader => {
+    sectionObserver.observe(fader);
+});

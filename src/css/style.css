@@ -787,3 +787,15 @@ footer > .citation {
 .link-icon:hover {
     color: var(--accent-alt);
 }
+
+/* ===== ANIMATION : SCROLL ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
