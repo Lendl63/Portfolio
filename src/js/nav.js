@@ -5,6 +5,7 @@ const openModal = () => {
     const modalNav = document.querySelector('.modal-nav');
     const navMenu = document.querySelector('.nav-menu');
     navMenu.innerHTML = "&times;";
+    navMenu.setAttribute('aria-expanded', 'true');
     modalNav.classList.add('active');
 }
 
@@ -13,6 +14,7 @@ const closeModal = () => {
     const modalNav = document.querySelector('.modal-nav');
     const navMenu = document.querySelector('.nav-menu');
     navMenu.innerHTML = "&#9776;";
+    navMenu.setAttribute('aria-expanded', 'false');
     modalNav.classList.remove('active');
 }
 
@@ -29,6 +31,18 @@ const isDesktop = () => {
         navMenu.style.display = "none";
     }
 }
+
+/*===== Throttle helper pour performance =====*/
+const throttle = (func, delay) => {
+    let lastCall = 0;
+    return function(...args) {
+        const now = Date.now();
+        if (now - lastCall >= delay) {
+            lastCall = now;
+            func(...args);
+        }
+    };
+};
 
 /*===== Ajout de l'évenement au lien =====*/
 let count = 0; // Compter les click sur .nav-menu
@@ -50,7 +64,7 @@ modalNavLinks.forEach(link => {
 });
 
 /*===== Application du responsive (nav modal) sur tablette et modile =====*/
-window.addEventListener('resize', isDesktop);
+window.addEventListener('resize', throttle(isDesktop, 250));
 isDesktop();
 
 
