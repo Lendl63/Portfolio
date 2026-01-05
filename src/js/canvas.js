@@ -37,8 +37,8 @@ const CONFIG = {
     },
     // Interaction souris
     MOUSE_INFLUENCE: 0.3,
-    // Performance
-    MOBILE_STAR_REDUCTION: 0.5 // 50% d'étoiles sur mobile
+    // Performance optimisée pour mobile
+    MOBILE_STAR_REDUCTION: 0.4 // Réduit à 40% pour meilleure performance
 };
 
 // ===== DÉTECTION MOBILE =====
