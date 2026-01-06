@@ -694,8 +694,34 @@ header {
     border-radius: 15px;
 }
 
-.form > input,
-.form > textarea {
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.form-group > span {
+    display: none;
+    gap: 0.25rem;
+    font-family: var(--font-accent);
+    font-size: var(--fs-small);
+    color: var(--danger);
+    font-weight: var(--fw-regular);
+    margin-top: 0.4rem;
+}
+
+.form-group > span.error {
+    display: block;
+}
+
+input.error,
+textarea.error {
+    border: 2px solid var(--danger);
+}
+
+input,
+textarea {
     font-family: var(--font-main);
     font-size: var(--fs-small);
     font-weight: var(--fw-regular);
@@ -707,17 +733,17 @@ header {
     transition: border 0.2s ease-in-out;
 }
 
-.form > input {
+input {
     padding: 0.8rem;
 }
 
-.form > textarea {
+textarea {
     padding: 0.5rem;
     height: 9rem;
 }
 
-.form > input:focus,
-.form > textarea:focus {
+input:focus,
+textarea:focus {
     outline: none;
     background: var(--bg-dark);
     border: 1px solid var(--accent-main);
@@ -811,4 +837,114 @@ footer > .citation {
 .fade-in.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ===== SUCCESS MODAL ===== */
+.success-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.success-modal.active {
+    display: flex;
+}
+
+.success-modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, var(--card-dark) 0%, var(--card-soft) 100%);
+    border: 1px solid var(--border-soft);
+    border-radius: 15px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    animation: scaleIn 0.3s ease-out;
+}
+
+.success-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: var(--bg-icon);
+    border-radius: 50%;
+    color: var(--success);
+}
+
+.success-icon svg {
+    width: 40px;
+    height: 40px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.success-title {
+    font-family: var(--font-main);
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+    color: var(--text-main);
+    margin: 0;
+}
+
+.success-text {
+    font-family: var(--font-main);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-regular);
+    color: var(--text-muted);
+    margin: 0;
+    line-height: var(--lh-body);
+}
+
+.success-btn {
+    padding: 12px 32px;
+    background: linear-gradient(135deg, var(--accent-main), var(--accent-alt));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-semibold);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.success-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(91, 108, 255, 0.3);
+}
+
+/* Animation keyframes */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
