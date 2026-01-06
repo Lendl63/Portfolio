@@ -38,7 +38,7 @@ const CONFIG = {
     // Interaction souris
     MOUSE_INFLUENCE: 0.3,
     // Performance optimisée pour mobile
-    MOBILE_STAR_REDUCTION: 0.4 // Réduit à 40% pour meilleure performance
+    MOBILE_STAR_REDUCTION: 0.2 // Réduit à 20% pour meilleure performance
 };
 
 // ===== DÉTECTION MOBILE =====

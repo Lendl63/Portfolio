@@ -60,7 +60,8 @@ document.querySelector('.nav-menu').addEventListener('click', () => {
 const modalNavLinks = document.querySelectorAll('.modal-nav-link');
 
 modalNavLinks.forEach(link => {
-    link.addEventListener('click', closeModal);
+    // passive is safe here because we don't call preventDefault in closeModal
+    link.addEventListener('click', closeModal, { passive: true });
 });
 
 /*===== Application du responsive (nav modal) sur tablette et modile =====*/

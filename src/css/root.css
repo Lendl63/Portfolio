@@ -34,7 +34,7 @@
 
     /* Texte */
     --text-main: rgb(242, 242, 242);
-    --text-muted: rgb(92, 102, 115);
+    --text-muted: rgb(150, 160, 175); /* Improved contrast ratio for WCAG AA compliance */
 
     /* Accents */
     --accent-main: #5b6cff;

@@ -78,6 +78,33 @@ section {
     border-radius: 50%;
 }
 
+/* ===== ACCESSIBILITY - SKIP LINK ===== */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    display: block;
+}
+
+.skip-link:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    background: var(--accent-main);
+    color: white;
+    padding: 1rem 2rem;
+    z-index: 2000;
+    text-decoration: none;
+    border-radius: 0 0 8px 0;
+    font-weight: var(--fw-semibold);
+}
+
 /* ===== HEADER ===== */
 header {
     position: fixed;
@@ -149,6 +176,12 @@ header {
 .nav > a:hover,
 .modal-nav > div > a:hover {
     color: var(--accent-main);
+}
+
+.nav > a:active,
+.modal-nav > div > a:active {
+    transform: scale(0.95);
+    color: var(--accent-alt);
 }
 
 /*===== ANIMATION NAV LINKS AU SCROLL =====*/
@@ -243,9 +276,12 @@ header {
     align-items: center;
     gap: 12px;
 
-    padding: 12px 18px;
+    padding: 16px 24px;
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
+    
+    min-height: 44px;
+    min-width: 44px;
 
     cursor: pointer;
     color: var(--text-main);
@@ -265,6 +301,11 @@ header {
 .btn:hover {
     background: rgba(255, 255, 255, 0.342);
     border-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn:active {
+    transform: scale(0.98);
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .btn-text {
@@ -723,7 +764,7 @@ textarea.error {
 input,
 textarea {
     font-family: var(--font-main);
-    font-size: var(--fs-small);
+    font-size: 16px;
     font-weight: var(--fw-regular);
     width: 100%;
     border: none;
@@ -832,6 +873,9 @@ footer > .citation {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.3s ease;
+    /* Improve rendering performance for offscreen content */
+    content-visibility: auto;
+    contain-intrinsic-size: 200px;
 }
 
 .fade-in.show {

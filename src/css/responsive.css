@@ -1,14 +1,39 @@
 /*===== RESPONSIVE DESIGN =====*/
+
+/* ===== LARGE DESKTOP (1200px+) ===== */
+@media (min-width: 1200px) {
+    .about-contain,
+    .projects-contain {
+        width: 90%;
+        max-width: 1200px;
+    }
+}
+
+/* ===== DESKTOP (1025px - 1199px) ===== */
+@media (max-width: 1199px) and (min-width: 1025px) {
+    .about-contain,
+    .projects-contain {
+        width: 95%;
+    }
+}
+
+/* ===== TABLET LANDSCAPE (1024px) ===== */
 @media (max-width: 1024px) {
     .about-contain,
     .projects-contain {
         width: 100%;
     }
+
+    .hero-btn {
+        gap: 1rem;
+    }
 }
 
+/* ===== TABLET PORTRAIT (900px) ===== */
 @media (max-width: 900px) {
     .formation-contain {
         width: 100%;
+        padding: 2rem 1rem;
     }
 
     .projects-contain {
@@ -29,9 +54,11 @@
     }
 }
 
+/* ===== TABLET (768px) ===== */
 @media (max-width: 768px) {
     .about-contain {
         flex-direction: column;
+        padding: 0 1.5rem;
     }
 
     .about-text {
@@ -39,12 +66,13 @@
     }
     
     .skill-contain {
-        grid-template-columns: repeat(2, 2fr);
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1rem;
     }
 
     .projects-contain {
         grid-template-columns: repeat(1, 1fr);
-        padding: 1rem 1.5rem;
+        padding: 1rem 1rem;
     }
 
     .project-card {
@@ -55,59 +83,304 @@
     .project-card div {
         height: 100%;
     }
+
+    .formation-contain {
+        padding: 2rem 1.5rem;
+    }
 }
 
-@media (max-width: 600px) {
+/* ===== MOBILE MOYEN (480px - 599px) ===== */
+@media (max-width: 599px) and (min-width: 481px) {
+    .hero-btn {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about-contain {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .skill-contain {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
     }
 
     .reviews-contain {
         grid-template-columns: repeat(1, 1fr);
+        padding: 0 1rem;
     }
 
     .contact-contain {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #contact > p {
-        padding: 1rem;
-    }
-
-    .infos {
-        width: 100%;
-        align-items: center;
+        padding: 0 1rem;
     }
 
     .contact-contain > div:last-child {
         width: 100%;
-        padding: 2rem;
+        padding: 1.5rem;
+    }
+
+    .form {
+        width: 100%;
     }
 }
 
-@media (max-width: 360px) {
+/* ===== MOBILE PETIT (360px - 479px) ===== */
+@media (max-width: 479px) {
+    section {
+        padding: 2rem 0;
+    }
+
+    .section-title {
+        margin-top: 2rem;
+        font-size: 1.4rem;
+    }
+
+    .about-contain {
+        flex-direction: column;
+        padding: 0 0.75rem;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+
     .formation-contain {
-        padding: 0.5rem 1rem;
+        flex-direction: column;
+        padding: 1rem 0.75rem;
+        gap: 1rem;
     }
 
     .formation-card {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .formation-icon {
+        min-width: 45px;
+        min-height: 45px;
+        width: 45px;
+        height: 45px;
     }
 
     .skill-contain {
         grid-template-columns: repeat(1, 1fr);
+        padding: 0 0.75rem;
+        gap: 1rem;
+    }
+
+    .projects-contain {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0.75rem;
     }
 
     .project-card {
         flex-direction: column;
-        height: 25rem;
+        height: auto;
+        gap: 1rem;
+    }
+
+    .type-project {
+        min-height: 50px;
+    }
+
+    .details-project {
+        min-height: auto;
     }
 
     .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 0.75rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .reviews-contain {
         grid-template-columns: repeat(1, 1fr);
+        padding: 0 0.75rem;
+        gap: 1rem;
+    }
+
+    .reviews-card {
+        padding: 1rem;
+    }
+
+    .contact-contain {
+        flex-direction: column;
+        padding: 0 0.75rem;
+        gap: 2rem;
+    }
+
+    .infos {
+        width: 100%;
+    }
+
+    .contact-contain > div:last-child {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+
+    .hero-btn {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 0.75rem;
+    }
+
+    /* Header optimization for small mobile */
+    .logo-name {
+        font-size: 1.1rem;
+    }
+
+    .nav-menu {
+        font-size: 1.3rem;
+    }
+
+    /* Footer optimization for small mobile */
+    footer > .citation {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== TRÈS PETIT MOBILE (320px - 359px) ===== */
+@media (max-width: 359px) {
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .section-text {
+        font-size: 0.9rem;
+    }
+
+    .about-contain {
+        padding: 0 0.5rem;
+    }
+
+    .formation-contain {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .skill-contain {
+        padding: 0 0.5rem;
+    }
+
+    .projects-contain {
+        padding: 0.5rem;
+    }
+
+    .stats-grid {
+        padding: 0 0.5rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .reviews-contain {
+        padding: 0 0.5rem;
+    }
+
+    .contact-contain {
+        padding: 0 0.5rem;
+    }
+
+    .contact-contain > div:last-child {
+        padding: 0.75rem;
+    }
+
+    .hero-btn {
+        padding: 0 0.5rem;
+    }
+
+    .btn {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+        gap: 8px;
+    }
+
+    .btn-icon {
+        width: 24px;
+        height: 22px;
+    }
+
+    .btn-icon > svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    /* Header optimization for very small screens */
+    header {
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        gap: 0.15rem;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 0.25rem;
+    }
+
+    .logo-icon > svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .logo-name {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        font-size: 1.2rem;
+        padding: 0.25rem;
+    }
+
+    /* Footer optimization for very small screens */
+    footer {
+        padding: 1.5rem 0.5rem;
+        gap: 0.75rem;
+    }
+
+    footer > .citation {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        text-align: center;
     }
 }
